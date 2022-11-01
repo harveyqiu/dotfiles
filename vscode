@@ -1,0 +1,40 @@
+{
+  "terminal.integrated.fontFamily" : "Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontSize" : 22,
+  "workbench.colorTheme" : "Nord",
+  "editor.fontFamily" : "Zkwbsffkinrgvdwulsdrxjkfwss, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize" : 24,
+  "terminal.external.osxExec" : "iTerm.app",
+  "editor.accessibilitySupport": "off",
+  "editor.wordWrap": "on",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.stickyScroll.enabled": true,
+  "workbench.editorAssociations": {
+    "*.docx": "default"
+  },
+//   "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+//   "vim.autoSwitchInputMethod.enable": true,
+//   "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+//   "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+  "vim.useSystemClipboard": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "python.defaultInterpreterPath": "/usr/local/opt/python@3.10/bin/python3",
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+},
+"editor.detectIndentation": false,
+"markdown.extension.list.indentationSize": "inherit",
+}
