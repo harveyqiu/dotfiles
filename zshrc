@@ -8,7 +8,9 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottl
 eval $(thefuck --alias)
 alias ls="ls -haFG --color"
 
-
+alias gp="git push"
+alias gpu="git pull"
+alias gcm="git commit -m"
 
 # pnpm
 export PNPM_HOME="/Users/harveyqiu/Library/pnpm"
