@@ -7,8 +7,7 @@
 - link:
     ~/.bashrc: bashrc
     ~/.zshrc: zshrc
-    ~/.vimrc: vimrc
-    ~/.config/nvim/init.m: nvimrc
+    ~/.config/nvim/init.vim: nvimrc
     ~/Library/Application Support/Code/User/settings.json: vscode
 
 - shell:

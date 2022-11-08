@@ -9,8 +9,8 @@ set autoindent
 set smarttab
 set expandtab
 
-noremap H ^
-noremap L $
+nnoremap H ^
+nnoremap L $
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim

@@ -37,4 +37,8 @@
 },
 "editor.detectIndentation": false,
 "markdown.extension.list.indentationSize": "inherit",
+"[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"vscode-neovim.neovimInitVimPaths.darwin": "/Users/harveyqiu/.config/nvim/init.m",
 }

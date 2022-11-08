@@ -9,3 +9,13 @@ eval $(thefuck --alias)
 alias ls="ls -haFG --color"
 
 
+
+# pnpm
+export PNPM_HOME="/Users/harveyqiu/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
