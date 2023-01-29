@@ -1,8 +1,7 @@
 {
   "terminal.integrated.fontFamily" : "Menlo, Monaco, 'Courier New', monospace",
   "terminal.integrated.fontSize" : 22,
-  "workbench.colorTheme" : "Nord",
-  "editor.fontFamily" : "Zkwbsffkinrgvdwulsdrxjkfwss, Menlo, Monaco, 'Courier New', monospace",
+"workbench.colorTheme": "Nord",
   "editor.fontSize" : 24,
   "terminal.external.osxExec" : "iTerm.app",
   "editor.accessibilitySupport": "off",
@@ -40,5 +39,15 @@
 "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
 },
-"vscode-neovim.neovimInitVimPaths.darwin": "/Users/harveyqiu/.config/nvim/init.m",
+"vscode-neovim.neovimInitVimPaths.darwin": "/Users/harveyqiu/.config/nvim/init.lua",
+"files.autoSave": "onFocusChange",
+"[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"prettier.tabWidth": 4,
+"go.toolsManagement.autoUpdate": true,
+"debug.allowBreakpointsEverywhere": true,
 }

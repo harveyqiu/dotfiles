@@ -7,8 +7,8 @@
 - link:
     ~/.bashrc: bashrc
     ~/.zshrc: zshrc
-    ~/.config/nvim/init.vim: nvimrc
     ~/Library/Application Support/Code/User/settings.json: vscode
+    ~/.config/nvim/init.lua: nvim.lua
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
