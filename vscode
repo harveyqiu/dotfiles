@@ -1,5 +1,5 @@
 {
-  "terminal.integrated.fontFamily" : "Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily" : "'Jetbrains Mono', Menlo, Monaco, 'Courier New', monospace",
   "terminal.integrated.fontSize" : 22,
 "workbench.colorTheme": "Nord",
   "editor.fontSize" : 24,
@@ -50,4 +50,9 @@
 "prettier.tabWidth": 4,
 "go.toolsManagement.autoUpdate": true,
 "debug.allowBreakpointsEverywhere": true,
+"redhat.telemetry.enabled": false,
+"[python]": {
+    "editor.formatOnType": true
+},
+"editor.fontFamily": "'Jetbrains Mono', Menlo, Monaco, 'Courier New', monospace",
 }

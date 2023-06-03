@@ -33,9 +33,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    "nordtheme/vim",
     "ggandor/leap.nvim",
     "ybian/smartim",
     "lukas-reineke/indent-blankline.nvim",
+    "nvim-tree/nvim-tree.lua",
+    {
+      "nvim-telescope/telescope.nvim", tag = '0.1.1',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    "godlygeek/tabular",
+    "preservim/vim-markdown",
+    {
+      "nvim-treesitter/nvim-treesitter",
+      build =  ":TSUpdate"
+    }
+
 })
 
 require('leap').add_default_mappings()
@@ -45,3 +58,31 @@ require("indent_blankline").setup()
 
 vim.opt.list = true
 
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  view = {
+    width = 20,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
+
+require("telescope").setup({
+  defaults = {
+    layout_config = {
+      horizontal = {
+        preview_cutoff = 0,
+      },
+    },
+  },
+})
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.cmd [[colorscheme nord]]

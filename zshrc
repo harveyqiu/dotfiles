@@ -1,7 +1,3 @@
-export PATH="/usr/local/opt/python@3.10/bin:$PATH"
-
-export PATH="/usr/local/opt/node@16/bin:$PATH"
-
 export PATH="$HOME/.deno/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -27,3 +23,46 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
 eval "$(zoxide init zsh)"
+
+export EDITOR=nvim
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+rga-fzf() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+rga-fzf() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
+
+alias rf="rga-fzf"
+alias f='open "$(fzf)"'
+alias cf='open "$(pinyin-stdout)"'
+bindkey "ç" fzf-cd-widget
+alias gu="gitui"
+alias rgap="rga --glob '!*.pdf'"
+alias kdp="cd ~/OneDrive/kinding/project"
+alias kd="cd ~/OneDrive/kinding/"
