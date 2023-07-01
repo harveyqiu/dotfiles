@@ -47,8 +47,22 @@ require("lazy").setup({
     {
       "nvim-treesitter/nvim-treesitter",
       build =  ":TSUpdate"
-    }
-
+    },
+    "epwalsh/obsidian.nvim",
+    "hrsh7th/nvim-cmp",
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    },
 })
 
 require('leap').add_default_mappings()
@@ -86,3 +100,13 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.cmd [[colorscheme nord]]
+
+require('cmp').setup({
+  sources = {
+    { name = 'nvim_lua' }
+  }
+})
+
+require("obsidian").setup({})
+require("which-key").setup({})
+

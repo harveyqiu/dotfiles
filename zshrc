@@ -22,11 +22,10 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
-eval "$(zoxide init zsh)"
-
 export EDITOR=nvim
 autoload -U edit-command-line
 zle -N edit-command-line
+bindkey -v
 bindkey -M vicmd v edit-command-line
 rga-fzf() {
 	RG_PREFIX="rga --files-with-matches"
@@ -39,13 +38,10 @@ rga-fzf() {
 				--preview-window="70%:wrap"
 	)" &&
 	echo "opening $file" &&
-	xdg-open "$file"
+	open "$file"
 }
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
-rga-fzf() {
-	RG_PREFIX="rga --files-with-matches"
+rgap-fzf() {
+	RG_PREFIX="rga --files-with-matches --glob '!*.pdf'"
 	local file
 	file="$(
 		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
@@ -55,10 +51,14 @@ rga-fzf() {
 				--preview-window="70%:wrap"
 	)" &&
 	echo "opening $file" &&
-	xdg-open "$file"
+	open "$file"
 }
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+
 alias rf="rga-fzf"
+alias rfp="rgap-fzf"
 alias f='open "$(fzf)"'
 alias cf='open "$(pinyin-stdout)"'
 bindkey "ç" fzf-cd-widget
@@ -66,3 +66,4 @@ alias gu="gitui"
 alias rgap="rga --glob '!*.pdf'"
 alias kdp="cd ~/OneDrive/kinding/project"
 alias kd="cd ~/OneDrive/kinding/"
+eval "$(starship init zsh)"
