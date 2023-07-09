@@ -64,6 +64,10 @@ alias cf='open "$(pinyin-stdout)"'
 bindkey "ç" fzf-cd-widget
 alias gu="gitui"
 alias rgap="rga --glob '!*.pdf'"
+alias sb="subl"
 alias kdp="cd ~/OneDrive/kinding/project"
 alias kd="cd ~/OneDrive/kinding/"
+alias lc="cd ~/Obsidian/LawChiu/"
+alias lcc="cd ~/Obsidian/LawChiu/ClientProject/"
+alias lccn="cd ~/Obsidian/LawChiu/ClientProject/Note"
 eval "$(starship init zsh)"
