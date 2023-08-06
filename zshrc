@@ -70,4 +70,7 @@ alias kd="cd ~/OneDrive/kinding/"
 alias lc="cd ~/Obsidian/LawChiu/"
 alias lcc="cd ~/Obsidian/LawChiu/ClientProject/"
 alias lccn="cd ~/Obsidian/LawChiu/ClientProject/Note"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+
+source /Users/harveyqiu/.config/broot/launcher/bash/br
+export PATH="/usr/local/sbin:$PATH"

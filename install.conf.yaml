@@ -7,8 +7,12 @@
 - link:
     ~/.bashrc: bashrc
     ~/.zshrc: zshrc
+    ~/.config/fish: fish
     ~/Library/Application Support/Code/User/settings.json: vscode
-    ~/.config/nvim/init.lua: nvim.lua
+    ~/.config/nvim: nvim
+    ~/.config/karabiner.den: karabiner.edn 
+    ~/.config/alacritty: alacritty
+    ~/.config/lf: lf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

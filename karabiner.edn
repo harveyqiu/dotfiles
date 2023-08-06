@@ -1,0 +1,82 @@
+{:profiles
+ {:goku {:default true
+         :alone   80 ; hold for .. ms to register single tap
+         :held    60 ; TODO: not sure what it's for
+         :delay   0 ; time after which the key press is delayed
+         :sim     30}} ; keys need to be pressed within this threshold to be considered simultaneous
+ :devices {:gs [{:vendor_id 1452 :product_id 544}]}
+ :templates {:alfred "osascript -e 'tell application id \"com.runningwithcrayons.Alfred\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+             :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
+             :open "open \"%s\""
+             }
+ :simlayers {
+             :2-mode {:key :2}
+             :3-mode {:key :3}
+             :4-mode {:key :4}
+             :tab-mode {:key :tab}
+             :q-mode {:key :q}
+             :w-mode {:key :w}
+             :e-mode {:key :e}
+             :r-mode {:key :r}
+             :t-mode {:key :t}
+             :i-mode {:key :i}
+             :o-mode {:key :o}
+             :caps-mode {:key :caps_lock}
+             :a-mode {:key :a}
+             :s-mode {:key :s}
+             :d-mode {:key :d}
+             :f-mode {:key :f}
+             :g-mode {:key :g}
+             :semicolon-mode {:key :semicolon}
+             :tilde-mode {:key :grave_accent_and_tilde}
+             :z-mode {:key :z}
+             :x-mode {:key :x}
+             :c-mode {:key :c}
+             :v-mode {:key :v}
+             :b-mode {:key :b}
+             :n-mode {:key :n}
+             :m-mode {:key :m}
+             :comma-mode {:key :comma}
+             :dot-mode {:key :period}
+             :spacebar-mode {:key :spacebar}
+             :ts-mode {:key :period :condi ["in-ts" 1]}
+             :rust-mode {:key :period :condi ["in-rust" 1]}
+             :swift-mode {:key :period :condi ["in-swift" 1]}
+             :go-mode {:key :period :condi ["in-go" 1]}
+             :py-mode {:key :period :condi ["in-python" 1]}
+             }
+ :main [
+    {
+        :des "grave_accent_and_tilde to caps_lock"
+        :rules [[:grave_accent_and_tilde :caps_lock]]
+    }
+    {
+        :des "caps_lock to left_control"
+        :rules [[:caps_lock :left_control]]
+    }
+    {
+        :des "left_control to grave_accent_and_tilde"
+        :rules [[:left_control :grave_accent_and_tilde]]
+    }
+    {
+        :des "tab (apps)"
+        :rules [:tab-mode
+                [:l [:km "open: Lark"]]
+                [:d [:km "open: Downloads Folder"]]
+                [:w [:km "open: Word"]]
+                [:o [:km "open: Outlook"]]
+                [:p [:km "open: Obsidian"]]
+                [:f [:km "open: Firefox"]]
+                [:e [:km "open: Edge"]]
+                [:a [:km "open: Alacritty"]]
+                [:c [:km "open: Wechat"]]
+                [:t [:km "open: DailyTasks"]]
+                [:b [:km "open: Bill"]]
+                [:h [:km "open: Lark Home"]]
+        ]
+    }
+    {
+        :des "page_down to down_arrow"
+        :rules [:gs [:page_down :down_arrow]]
+    }
+]}
