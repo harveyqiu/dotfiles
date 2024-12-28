@@ -1,0 +1,72 @@
+{
+    "terminal.integrated.fontFamily": "'Jetbrains Mono', Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 22,
+    "workbench.colorTheme": "Default Dark Modern",
+    "editor.fontSize": 24,
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.accessibilitySupport": "off",
+    "editor.wordWrap": "on",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.stickyScroll.enabled": true,
+    "workbench.editorAssociations": {
+        "*.docx": "default"
+    },
+    "vim.useSystemClipboard": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
+    },
+    "editor.detectIndentation": false,
+    "markdown.extension.list.indentationSize": "inherit",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/harveyqiu/.config/nvim/init.lua",
+    "files.autoSave": "onFocusChange",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
+    "go.toolsManagement.autoUpdate": true,
+    "debug.allowBreakpointsEverywhere": true,
+    "redhat.telemetry.enabled": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.fontFamily": "'Jetbrains Mono', Menlo, Monaco, 'Courier New', monospace",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "gitlens.ai.experimental.provider": "openai",
+    "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
+    "marscode.chatLanguage": "cn",
+    "marscode.codeCompletionPro": {
+        "enableCodeCompletionPro": true
+    },
+    "git.autofetch": true,
+    "cursor.aipreview.enabled": true,
+    "foam.completion.useAlias": "whenPathDiffersFromTitle",
+    "files.hotExit": "onExitAndWindowClose",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "workbench.activityBar.orientation": "vertical",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Nord Light",
+    "workbench.preferredDarkColorTheme": "Nord",
+}

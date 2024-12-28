@@ -31,10 +31,11 @@ set PATH $PNPM_HOME $PATH
 # pnpm end
 
 set -x GOPATH $HOME/go
-set -x GOROOT /usr/local/opt/go/libexec
 set PATH $PATH $GOPATH/bin
-set PATH $PATH $GOROOT/bin
+set OPENSSL_DIR /opt/homebrew/bin/openssl
 
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.docker/bin:$PATH"
 set -x EDITOR nvim
 function edit-command-line
     commandline -f edit
@@ -97,3 +98,12 @@ alias lcc "cd ~/Obsidian/LawChiu/ClientProject/"
 alias lccn "cd ~/Obsidian/LawChiu/ClientProject/Note"
 
 source /Users/harveyqiu/.config/fish/functions/br.fish 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+set PATH $HOME $PATH
+
+set -gx RESTIC_REPOSITORY rest:http://localhost:8080/
+set -gx RESTIC_PASSWORD Do7F96taL#C!ir
